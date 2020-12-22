@@ -14,6 +14,7 @@ module.exports = {
         spaceId: `fzphekrg5op5`,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
-    }
+    },
+    'gatsby-plugin-postcss'
   ],
 }
