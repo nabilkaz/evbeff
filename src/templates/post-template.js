@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Layout from '../components/Layout';
 
 export const query = graphql`
     query ($slug: String!) {
@@ -16,13 +17,13 @@ export const query = graphql`
 `
 
 const postTemplate = ({data: {post}}) => (
-    <div>
+    <Layout>
         <h1>{post.title}</h1>
         <p>{post.date}</p>
         <div>
             {documentToReactComponents(JSON.parse(post.content.raw))}
         </div>
-    </div>
+    </Layout>
 )
 
 export default postTemplate;
