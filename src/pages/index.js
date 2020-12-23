@@ -1,7 +1,7 @@
 import React from "react";
 import {graphql } from "gatsby";
-import Nav from "../components/Nav";
-import PostItem from "../components/PostItem";
+import PostItemList from "../components/PostItemList/PostItemList";
+import Layout from '../components/Layout';
 
 export const query = graphql`
 query {
@@ -21,10 +21,7 @@ query {
 }`;
 
 export default ({data: {posts}}) => (
-  <div>
-    <Nav />
-    {posts.nodes.map(post => (
-      <PostItem key={`post-${post.slug}`} post={post} />
-    ))}
-  </div>
+  <Layout>
+    <PostItemList posts={posts}/>
+  </Layout>
 );
