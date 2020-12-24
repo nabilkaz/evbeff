@@ -23,5 +23,6 @@ query {
 export default ({data: {posts}}) => (
   <Layout>
     <PostItemList posts={posts}/>
+    <p className="max-w-screen-sm mx-auto text-center"><span role="img" aria-label="pizza kiss">🍕💋</span></p>
   </Layout>
 );

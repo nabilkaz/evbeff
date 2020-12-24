@@ -3,7 +3,7 @@ import Nav from "../Nav";
 
 export default function Layout({children}) {
     return (
-        <div>
+        <div className="max-w-prose mx-auto items-center">
             <Nav />
             {children}
         </div>
