@@ -1,7 +1,10 @@
 require("dotenv").config();
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Evbeff',
+    description: "Evbeff's writing."
+  },
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
@@ -10,6 +13,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    'gatsby-plugin-postcss'
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet'
   ],
 }
