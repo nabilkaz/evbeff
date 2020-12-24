@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Nav() {
     return (
-            <nav className="max-w-7xl mx-auto sm:px-6 lg:px-8 flex items-center justify-between h-16 px-4 sm:px-0">
+            <nav className="flex items-center justify-between h-16 px-4 sm:px-6">
                 <span>
                     <Link to='/'>evbeff</Link>
                 </span>
