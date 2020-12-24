@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -7,7 +9,11 @@ module.exports = {
       serif: ['PT Serif', 'serif'],
       mono: ['PT Mono', 'mono'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        violet: colors.violet,
+      },
+    },
   },
   variants: {
     extend: {},
